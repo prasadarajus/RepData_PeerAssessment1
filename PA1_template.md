@@ -1,8 +1,7 @@
----
-title: "Reproducible Research Assignment1"
-output: html_document
----
-Loading and preprocessing the data
+
+## "Reproducible Research Assignment1"
+
+### Loading and preprocessing the data
 
 ```r
 readActivity = read.csv("/DataScience/R-Files/RepResearch/activity.csv",head=TRUE, sep=",")
@@ -16,8 +15,7 @@ totSteps <- aggregate(filterData$steps, by=list(filterData$date), FUN=sum)
 names(totSteps) <- c("Date","Steps")
 ```
 
-What is mean total number of steps taken per day?
-
+### What is mean total number of steps taken per day?
 Make a histogram of the total number of steps taken each day
 
 ```r
@@ -43,10 +41,9 @@ median(totSteps$Steps)
 ```
 ## [1] 10765
 ```
-What is the average daily activity pattern?
+### What is the average daily activity pattern?
 
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and 
-
 the average number of steps taken, averaged across all days (y-axis)
 
 ```r
@@ -68,7 +65,7 @@ AvgInterval[which.max(AvgInterval$Steps), ]$Interval
 ## [1] 835
 ```
 
-Imputing missing values
+### Imputing missing values
 Note that there are a number of days/intervals where there are missing values (coded as NA). 
 The presence of missing days may introduce bias into some calculations or summaries of the data.
 Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
@@ -146,11 +143,10 @@ What is the impact of imputing missing data on the estimates of the total daily 
  
 
 The value of mean is same for before and after imputing missing data.
-
 There is a little difference for median value before and after imputing missing data.
 
 
-Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 For this part the weekdays() function may be of some help here. 
 Use the dataset with the filled-in missing values for this part.
 

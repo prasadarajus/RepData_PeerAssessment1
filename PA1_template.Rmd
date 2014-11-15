@@ -1,4 +1,7 @@
-
+---
+title: "PA1_template.Rmd"
+output: html_document
+---
 ## "Reproducible Research Assignment1"
 
 ### Loading and preprocessing the data
